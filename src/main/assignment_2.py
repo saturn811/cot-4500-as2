@@ -83,37 +83,37 @@ b6 = 1.318
 
 c1 = 0 
 c2 = -1.195
-c3 = round((b3 - b2) / (a3 - a2), 3)
+c3 = round((b3 - b2) / (a3 - a2), 7)
 c4 = -1.188
-c5 = round((b5-b4) / (a5-a4), 3)
+c5 = round((b5-b4) / (a5-a4), 7)
 c6 = -1.182
 
 d1 = 0
 d2 = 0
-d3 = round((c3-c2) / (a3-a2), 3)
-d4 = round((c4-c3) / (a4-a2), 3)
-d5 = round((c5-c4) / (a5-a3), 3)
-d6 = round((c6-c5) / (a6-a4), 3)
+d3 = round((c3-c2) / (a3-a2), 7)
+d4 = round((c4-c3) / (a4-a2), 7)
+d5 = round((c5-c4) / (a5-a3), 7)
+d6 = round((c6-c5) / (a6-a4), 7)
 
 e1 = 0
 e2 = 0
 e3 = 0
-e4 = round((d4-d3) / (a4-a1), 3)
-e5 = round((d5-d4) / (a5-a2), 3)
-e6 = round((d6-d5) / (a6-a3), 3)
+e4 = round((d4-d3) / (a4-a1), 7)
+e5 = round((d5-d4) / (a5-a2), 7)
+e6 = round((d6-d5) / (a6-a3), 7)
 
 f1 = 0 
 f2 = 0
 f3 = 0
 f4 = 0
-f5 = round((e5-e4) / (a5-a1), 3)
-f6 = round((e6-e5) / (a6-a2), 3)
+f5 = round((e5-e4) / (a5-a1), 7)
+f6 = round((e6-e5) / (a6-a2), 7)
 
 a = np.matrix([[a1,b1,c1,d1,e1,f1],[a2,b2,c2,d2,e2,f2],[a3,b3,c3,d3,e3,f3], [a4,b4,c4,d4,e4,f4], [a5,b5,c5,d5,e5,f5], [a6,b6,c6,d6,e6,f6]]) 
 print(a)
-print("\n")
 
 #QUESTION 5
+#Part A
 
 x0 = 2
 x1 = 5
@@ -147,23 +147,20 @@ t16=1
 
 z = np.matrix([[t1,t2,t3,t4],[t5,t6,t7,t8],[t9,t10,t11,t12], [t13,t14,t15,t16]])
 print(z)
-print("\n")
 
-
-
-
+#Part B
 r1=0
 r2=((3/h1)*(y2-y1)) - ((3/h0)*(y1-y0))
 r3=((3/h2)*(y3-y2)) - ((3/h1)*(y2-y1))
 r4=0
 
-r = np.matrix([[r1,r2,r3,r4]])
+r = np.array([r1,r2,r3,r4])
 
 print(r)
-print("\n")
 
-A = np.matrix([[t1,t2,t3,t4],[t5,t6,t7,t8],[t9,t10,t11,t12], [t13,t14,t15,t16]])
-b = np.matrix([[r1],[r2],[r3],[r4]])
+#Part C
+A = np.array([[t1,t2,t3,t4],[t5,t6,t7,t8],[t9,t10,t11,t12], [t13,t14,t15,t16]])
+b = np.array([r1, r2, r3, r4])
 
 x = solve(A,b)
 print(x)
